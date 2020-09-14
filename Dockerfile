@@ -28,5 +28,6 @@ RUN apt-get -qq update && apt-get install -qqy ffmpeg
 # Install scripts
 COPY /scripts /scripts
 RUN chmod -R 755 /scripts
+RUN mkdir -p /drop/temp-out
 
 ENTRYPOINT ["/scripts/start.sh"]
